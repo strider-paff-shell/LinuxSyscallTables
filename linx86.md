@@ -1,7 +1,7 @@
 # Syscall Table x86
 
 |  Nr.  | Syscallname   |      EAX      |      EBX      |      ECX      |      EDX      |      ESI      |      EDI      |      Definition      |
-|---|---|---|---|---|---|---|---|---|---|---|
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |0|sys_restart_syscall|0x00|-|-|-|-|-|kernel/signal.c:2058|
 |1|sys_exit|0x01|int error_code|-|-|-|-|kernel/exit.c:1046|
 |2|sys_form|0x02|struct pt_regs*|-|-|-|-|arch/alpha/kernel/entry.S:716|
