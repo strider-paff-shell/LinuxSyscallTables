@@ -19,7 +19,14 @@
 |14|sys_mknod|0x0e|const char __user *filename|int mode|unsigned dev|-|-|fs/namei.c:2067|
 |15|sys_chmod|0x0f|const char __user *filename|mode_t mode|-|-|-|fs/open.c:507|
 |16|sys_lchown16|0x10|-const char __user *filename|old_uid_t user|old_gid_t group|-|-|kernel/uid16.c:27|
-|17|Not implemeneted|0x11|-|-|-|-|-|-|
+|17|Not implemented|0x11|-|-|-|-|-|-|
 |18|sys_stat|0x12|char __user *filename|struct __old_kernel_stat __user *statbuf|-|-|-|fs/stat.c:150|
 |19|sys_lseek|0x13|unsigned int fd|off_t offset|unsigned int origin|-|-|fs/read_write.c:167|
 |20|sys_getpid|0x14|-|-|-|-|-|kernel/timer.c:1337|
+|21|sys_mount|0x15|char __user *dev_name|char __user *dir_name|char __user *type|unsigned long flags|void __user *data|fs/namespace.c:2118|
+|22|sys_oldumount|0x16|char __user *name|-|-|-|-|fs/namespace.c:1171|
+|23|sys_setuid16|0x17|-old_uid_t uid|-|-|-|-|kernel/uid16.c:67|
+|24|sys_getuid16|0x18|-|-|-|-|-|kernel/uid16.c:212|
+|25|sys_stime|0x19|time_t __user *tptr|-|-|-|-|kernel/time.c:81|
+|26|sys_ptrace|0x1a|long request|long pid|long addr|long data|-|kernel/ptrace.c:688|
+|27|sys_alarm|0x1b|unsigned int seconds|-|-|-|-|kernel/timer.c:1314|
