@@ -45,3 +45,28 @@
 |40|sys_rmdir|0x28|const char __user *pathname|-|-|-|-|fs/namei.c:2244|
 |41|sys_dup|0x29|unsigned int fildes|-|-|-|-|fs/cntl.c:131|
 |42|sys_pipe|0x2a|int __user *fildes|-|-|-|-|fs/pipe.c:1117|
+|43|sys_times|0x2b|struct tms__user *tbuf|-|-|-|-|kernel/sys.c:896|
+|44|Not implemented|0x2c|-|-|-|-|-|-|
+|45|sys_brk|0x2d|unsigned long brk|-|-|-|-|mm/mmap.c:245|
+|46|sys_setgid16|0x2e|old_gid_t gid|-|-|-|-|kernel/uid16.c:51|
+|47|sys_getgid16|0x2f|-|-|-|-|-|kernel/uid16.c:222|
+|48|sys_signal|0x30|int sig|__sighandler_t handler|-|-|-|kernel/signal.c:2683|
+|49|sys_geteuid16|0x31|-|-|-|-|-|kernel/uid16.c:217|
+|50|sys_getegid16|0x32|-|-|-|-|-|kernel/uid16.c:227|
+|51|sys_acct|0x33|const char __user *name|-|-|-|-|kernel/acct.c:274|
+|52|sys_umount|0x34|char __user *name|int flags|-|-|-|fs/namespace.c:1132|
+|53|Not implemented|0x35|-|-|-|-|-|-|
+|54|sys_ioctl|0x36|unsigned int fd|unsigned int cmd|unsigned long arg|-|-|fs/ioctl.c:613|
+|55|sys_fnctl|0x37|unsigned int fd|unsigned int cmd|unsigned long arg|-|-|fs/fcntl.c:429|
+|56|Not implemented|0x38|-|-|-|-|-|-|
+|57|sys_setpgid|0x39|pid_t pid|pid_t pgid|-|-|-|kernel/sys.c:921|
+|58|Not implemented|0x3a|-|-|-|-|-|-|
+|59|sys_olduname|0x3b|stuct oldold_utsname __user *|-|-|-|-|kernel/sys.c:1132|
+|60|sys_umask|0x3c|int mask|-|-|-|-|kernel/sys.c:1460|
+|61|sys_chroot|0x3d|const char __user *filename|-|-|-|-|fs/open.c:408|
+|62|sys_ustat|0x3e|unsigned dev|struct ustat __user* ubuf|-|-|-|fs/statfs.c:175|
+|63|sys_dup2|0x3f|unsigned int oldfd|unsigned int newfd|-|-|-|fs/fnctl.c:116|
+|64|sys_getppid|0x40|-|-|-|-|-|kernel/timer.c:1348|
+|65|sys_getpgrp|0x41|-|-|-|-|-|kernel/sys.c:1020|
+|66|sys_setsid|0x42|-|-|-|-|-|kernel/sys.c:1055|
+|67|sys_sigaction|0x43|int sig|const struct old_sigaction __user *act|const struct old_sigaction __user *oact|-|-|arch/mips/kernel/signal.c:300|
