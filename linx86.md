@@ -30,3 +30,18 @@
 |25|sys_stime|0x19|time_t __user *tptr|-|-|-|-|kernel/time.c:81|
 |26|sys_ptrace|0x1a|long request|long pid|long addr|long data|-|kernel/ptrace.c:688|
 |27|sys_alarm|0x1b|unsigned int seconds|-|-|-|-|kernel/timer.c:1314|
+|28|sys_fstat|0x1c|unsigned int fd|struct __old_kernel_stat __user *statbuf||||fs/stat.c:174|
+|29|sys_pause|0x1d|-|-|-|-|-|kernel/signal.c:2700|
+|30|sys_utime|0x1e|char __user *filenmame|struct utimebuf __user *times||||fs/utimes.c:27|
+|31|Not implemented|0x1f|-|-|-|-|-|-|
+|32|Not implemented|0x20|-|-|-|-|-|-|
+|33|sys_access|0x21|const char __user *filename|int mode|-|-|-|fs/open.c:356|
+|34|sys_nice|0x22|int increment|-|-|-|-|kernel/sched.c:4282|
+|35|Not implemented|0x23|-|-|-|-|-|-|
+|36|sys_sync|0x24|-|-|-|-|-|fs/sync.c:98|
+|37|sys_kill|0x25|int pid|int sig|-|-|-|kernel/signal.c:2317|
+|38|sys_rename|0x26|const char __user *oldname|const char __user *newname|-|-|-|fs/namei.c:2756|
+|39|sys_mkdir|0x27|const char __user *pathname|int mode|-|-|-|fs/namei.c:2130|
+|40|sys_rmdir|0x28|const char __user *pathname|-|-|-|-|fs/namei.c:2244|
+|41|sys_dup|0x29|unsigned int fildes|-|-|-|-|fs/cntl.c:131|
+|42|sys_pipe|0x2a|int __user *fildes|-|-|-|-|fs/pipe.c:1117|
