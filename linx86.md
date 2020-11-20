@@ -70,3 +70,24 @@
 |65|sys_getpgrp|0x41|-|-|-|-|-|kernel/sys.c:1020|
 |66|sys_setsid|0x42|-|-|-|-|-|kernel/sys.c:1055|
 |67|sys_sigaction|0x43|int sig|const struct old_sigaction __user *act|const struct old_sigaction __user *oact|-|-|arch/mips/kernel/signal.c:300|
+|68|sys_sgetmask|0x44|-|-|-|-|-|kernel/signal.c:2657|
+|69|sys_ssetmask|0x45|int newmask|-|-|-|-|kernel/signal.c:2663|
+|70|sys_setreuid16|0x46|old_uid_t ruid|old_uid_t euid|-|-|-|kernel/uid16.c:59|
+|71|sys_setregid16|0x47|old_gid_t rgid|old_gid_t egid|-|-|-|kernel/uid16.c:43|
+|72|sys_sigsuspend|0x48|int historyx0|int history1|old_sigset_t mask|-|-|arch/s390/kernel/signal.c:58|
+|73|sys_sigpending|0x49|old_sigset_t __user *set|-|-|-|-|kernel/signal.c:2562|
+|74|sys_sethostname|0x4a|char __user *name|int len|-|-|-|kernel/sys.c:1165|
+|75|sys_setrlimit|0x4b|unsigned int resource|sturct rlimit __user *rlim|-|-|-|kernel/sys.c:1275|
+|76|sys_old_getrlimit|0x4c|unsigned int resource|sturct rlimit __user *rlim|-|-|-|kernel/sys.c:1256|
+|77|sys_getrusage|0x4d|int who|struct rusage __user *ru|-|-|-|kernel/sys.c:1452|
+|78|sys_gettimeofday|0x4e|struct timeval __user* tv|struct timezone __user *tz|-|-|-|kernel/time.c:101|
+|79|sys_settimeofday|0x4f|struct timeval __user* tv|struct timezone __user *tz|-|-|-|kernel/time.c:185|
+|80|sys_getgroups16|0x50|int gidsetsize|old_gid_t __user * grouplist|-|-|-|kernel/uid16.c:164|
+|81|sys_setgroups16|0x51|int gidsetsize|old_gid_t __user * grouplist|-|-|-|kernel/uid16.c:187|
+|82|sys_old_select|0x52|struct sel_arg_struct __user *arg|-|-|-|-|fs/select.c:701|
+|83|sys_symlink|0x53|const char __user *old|const char __user *new|-|-|-|fs/namei.c:2419|
+|84|sys_lstat|0x54|char __user *filename|struct __old_kernel_stat __user *statbuf|-|-|-|fs/stat.c:162|
+|85|sys_readlink|0x55|const char __user *path|char __user *buf|int bufsiz|-|-|fs/stat.c:311|
+|86|sys_uselib|0x56|const char __user *library|-|-|-|-|fs/exec.c:107|
+|87|sys_swapon|0x57|const char __user *specialfile|int swap_flags|-|-|-|mm/swapfile.c:1793|
+|88|sys_reboot|0x58|int magic1|int magic2|unsigned int cmd|voud __user *arg|-|kernel/sys.c:368|
